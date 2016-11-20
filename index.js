@@ -9,5 +9,6 @@ module.exports = {
 
     app.import('bower_components/tribute/dist/tribute.js');
     app.import('bower_components/tribute/dist/tribute.css');
+    app.import('vendor/shims/tribute.js');
   }
 };
