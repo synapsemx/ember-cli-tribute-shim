@@ -1,8 +1,19 @@
-# Ember-cli-tribute-shim
+# ember-cli-tribute-shim
 
-This README outlines the details of collaborating on this Ember addon.
+A simple shim for [Tribute.js](https://github.com/zurb/tribute) that exposes the library as an ES6 module.
 
 ## Installation
+
+Please install this addon into your Ember.js project using ember-cli:
+```
+ember install ember-cli-tribute-shim
+```
+
+You can then import tribute as an ES6 module:
+```js
+import Tribute from 'tribute';
+````
+## Contributing
 
 * `git clone <repository-url>` this repository
 * `cd ember-cli-tribute-shim`
