@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-tribute-shim",
-  "version": "0.1.1",
+  "version": "0.2.0",
   "description": "A simple shim for Tribute.js that exposes the library as an ES6 module.",
   "directories": {
     "doc": "doc",
@@ -45,7 +45,10 @@
     "zurb"
   ],
   "dependencies": {
-    "ember-cli-babel": "^5.1.7"
+    "broccoli-funnel": "^2.0.2",
+    "broccoli-merge-trees": "^3.0.2",
+    "ember-cli-babel": "^5.1.7",
+    "tributejs": "^3.7.3"
   },
   "ember-addon": {
     "configPath": "tests/dummy/config"

@@ -1,14 +1,26 @@
 /* jshint node: true */
 'use strict';
 
+var path = require('path');
+var Funnel = require('broccoli-funnel');
+var MergeTrees = require('broccoli-merge-trees');
+
 module.exports = {
   name: 'ember-cli-tribute-shim',
 
   included: function(app) {
-    this._super(app);
+    this._super.included.apply(this, arguments);
 
-    app.import('bower_components/tribute/dist/tribute.js');
-    app.import('bower_components/tribute/dist/tribute.css');
-    app.import('vendor/shims/tribute.js');
+    this.import('vendor/tribute.js');
+    this.import('vendor/tribute.css');
+    this.import('vendor/shims/tribute.js');
   }
+
+  treeForVendor(vendorTree) {
+    var tributeTree = new Funnel(path.dirname(require.resolve('tributejs/tribute.js')), {
+      files: ['tribute.js', 'tribute.css'],
+    });
+
+    return new MergeTrees([vendorTree, tributeTree]);
+  },
 };
