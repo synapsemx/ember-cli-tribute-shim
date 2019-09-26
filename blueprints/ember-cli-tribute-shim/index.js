@@ -5,6 +5,6 @@ module.exports = {
   normalizeEntityName: function() {},
 
   afterInstall: function(options) {
-    return this.addBowerPackageToProject('tribute', '^2.1.0');
+    return this.addPackageToProject('tributejs');
   }
 };
